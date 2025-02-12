@@ -49,10 +49,10 @@ dependencies {
     implementation(project(":core:ui"))
     implementation(project(":core:common"))
     implementation(project(":core:android"))
+    implementation(project(":feature:splash"))
 
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
-
 
     implementation(libs.voyager.navigator)
     implementation(libs.voyager.transitions)
