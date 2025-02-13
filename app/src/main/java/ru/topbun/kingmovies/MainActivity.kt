@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.ui.graphics.Color
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.defaultNavigatorSaver
 import ru.topbun.splash.SplashScreen
@@ -16,7 +17,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            changeStatusBar(Colors.BG_100)
+            changeStatusBar(Color.Transparent)
             Navigator(SplashScreen)
         }
     }

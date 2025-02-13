@@ -1,5 +1,6 @@
 package ru.topbun.ui.theme
 
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 
 
@@ -19,11 +20,13 @@ object Colors {
     val RED_100 = Color(0xFFFF6347)
     val RED_200 = Color(0xFFD7341D)
     val RED_300 = Color(0xFF8D0000)
+    val RED_100_200 = Brush.horizontalGradient(listOf(RED_100, RED_200))
 
     val GREEN_100 = Color(0xFF22F577)
     val GREEN_200 = Color(0xFF31CE70)
 
     val BLUE_100 = Color(0xFF2C32E0)
     val BLUE_200 = Color(0xFF474EFF)
+
 
 }
