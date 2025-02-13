@@ -11,6 +11,7 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import org.koin.compose.getKoin
+import ru.topbun.privacy_policy.PrivacyScreen
 import ru.topbun.splash.SplashScreen
 import ru.topbun.ui.utills.changeStatusBar
 
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             changeStatusBar(Color.Transparent)
-            Navigator(SplashScreen)
+            Navigator(PrivacyScreen)
         }
     }
 

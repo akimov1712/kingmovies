@@ -49,10 +49,13 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:android"))
     implementation(project(":feature:splash"))
+    implementation(project(":feature:privacy-policy"))
+    implementation(project(":domain"))
+    implementation(project(":data"))
 
     implementation(libs.koin.android)
-    implementation(libs.koin.compose)
     implementation(libs.koin.core)
+    implementation(libs.koin.compose)
     implementation(libs.koin.compose.viewmodel)
 
     implementation(libs.voyager.navigator)
