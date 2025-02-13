@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.hilt)
     alias(libs.plugins.kapt)
 }
 
@@ -44,8 +43,10 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:android"))
 
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.android.compiler)
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
+    implementation(libs.koin.core)
+    implementation(libs.koin.compose.viewmodel)
 
     implementation(libs.voyager.navigator)
     implementation(libs.voyager.transitions)
