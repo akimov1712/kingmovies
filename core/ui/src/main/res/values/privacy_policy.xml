@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="policy_title_1">1. Общие положения</string>
-    <string name="policy_title_2">2. Цели сбора и обработки информации</string>
-    <string name="policy_title_3">3. Типы собираемой информации</string>
-    <string name="policy_title_4">4. Защита информации</string>
-    <string name="policy_title_5">5. Cookies</string>
-    <string name="policy_title_6">6. Передача данных третьим лицам</string>
-    <string name="policy_title_7">7. Рекламные материалы</string>
-    <string name="policy_title_8">8. Возрастные ограничения</string>
-    <string name="policy_title_9">9. Изменения в Политике конфиденциальности</string>
-    <string name="policy_title_10">10. Контакты</string>
-    <string name="policy_title_11">11. Заключительные положения</string>
+    <string-array name="policy_titles">
+        <item>1. Общие положения</item>
+        <item>2. Цели сбора и обработки информации</item>
+        <item>3. Типы собираемой информации</item>
+        <item>4. Защита информации</item>
+        <item>5. Cookies</item>
+        <item>6. Передача данных третьим лицам</item>
+        <item>7. Рекламные материалы</item>
+        <item>8. Возрастные ограничения</item>
+        <item>9. Изменения в Политике конфиденциальности</item>
+        <item>10. Контакты</item>
+        <item>11. Заключительные положения</item>
+    </string-array>
 
     <string-array name="policy_point_1">
         <item>1.1. Настоящая политика конфиденциальности (далее – «Политика») регулирует обработку персональных данных пользователей онлайн-кинотеатра KingMovies (далее – «Сервис») и применяется ко всем данным, которые могут быть собраны в процессе использования Сервиса.</item>

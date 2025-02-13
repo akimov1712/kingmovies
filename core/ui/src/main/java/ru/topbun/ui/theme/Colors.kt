@@ -6,6 +6,8 @@ import androidx.compose.ui.graphics.Color
 
 object Colors {
 
+    val WHITE = Color.White
+
     val BG_100 = Color(0xFF1A1A1A)
     val BG_200 = Color(0xFF292929)
     val BG_300 = Color(0xFF404040)

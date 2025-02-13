@@ -39,10 +39,11 @@ android {
 
 dependencies {
 
-
     implementation(project(":core:ui"))
     implementation(project(":core:common"))
     implementation(project(":core:android"))
+
+    implementation(project(":domain"))
 
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
