@@ -14,7 +14,7 @@ class SplashViewModel(
         delay(3000)
         updateState { copy(false) }
         delay(2000)
-        navigator.push(TODO())
+//        navigator.push(TODO())
     }
 
     init {
