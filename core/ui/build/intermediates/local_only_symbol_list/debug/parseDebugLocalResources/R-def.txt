@@ -1,0 +1,19 @@
+R_DEF: Internal format may change without notice
+local
+array policy_point_1
+array policy_point_10
+array policy_point_11
+array policy_point_2
+array policy_point_3
+array policy_point_4
+array policy_point_5
+array policy_point_6
+array policy_point_7
+array policy_point_8
+array policy_point_9
+array policy_titles
+drawable ic_back
+drawable ic_logo
+font golos_bold
+font golos_medium
+font golos_semibold
