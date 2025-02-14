@@ -29,6 +29,9 @@ int array policy_point_9 0x0
 int array policy_titles 0x0
 int drawable ic_back 0x0
 int drawable ic_logo 0x0
+int drawable ic_telegram 0x0
+int drawable ic_vk 0x0
+int drawable ic_yandex 0x0
 int font golos_bold 0x0
 int font golos_medium 0x0
 int font golos_semibold 0x0

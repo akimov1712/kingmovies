@@ -30,6 +30,9 @@ array policy_point_9
 array policy_titles
 drawable ic_back
 drawable ic_logo
+drawable ic_telegram
+drawable ic_vk
+drawable ic_yandex
 font golos_bold
 font golos_medium
 font golos_semibold

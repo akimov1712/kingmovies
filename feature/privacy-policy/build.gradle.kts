@@ -44,6 +44,7 @@ dependencies {
     implementation(project(":core:android"))
 
     implementation(project(":domain"))
+    implementation(project(":navigation"))
 
     implementation(libs.koin.android)
     implementation(libs.koin.compose)

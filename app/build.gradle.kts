@@ -32,6 +32,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.12"
+    }
     kotlinOptions {
         jvmTarget = "11"
     }
@@ -51,6 +54,7 @@ dependencies {
     implementation(project(":feature:splash"))
     implementation(project(":feature:privacy-policy"))
     implementation(project(":feature:agreement"))
+    implementation(project(":feature:auth"))
     implementation(project(":domain"))
     implementation(project(":data"))
 
@@ -61,6 +65,7 @@ dependencies {
 
     implementation(libs.voyager.navigator)
     implementation(libs.voyager.transitions)
+    implementation(libs.voyager.bottom.sheet.navigator)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
