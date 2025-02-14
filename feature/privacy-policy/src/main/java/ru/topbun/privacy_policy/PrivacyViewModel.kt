@@ -3,8 +3,7 @@ package ru.topbun.privacy_policy
 import androidx.lifecycle.viewModelScope
 import cafe.adriel.voyager.navigator.Navigator
 import kotlinx.coroutines.launch
-import org.koin.core.KoinApplication.Companion.init
-import ru.topbun.domain.useCase.privacy.LoadPrivacyUseCase
+import ru.topbun.domain.useCase.terms.LoadPrivacyUseCase
 import ru.topbun.ui.ViewModelState
 
 class PrivacyViewModel(

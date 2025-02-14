@@ -38,6 +38,8 @@ android {
 
 dependencies {
 
+    implementation(project(":domain"))
+
     implementation (libs.accompanist.systemuicontroller)
 
     implementation(libs.voyager.navigator)

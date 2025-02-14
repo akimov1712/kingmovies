@@ -1,16 +1,14 @@
 package ru.topbun.data.repository
 
 import android.content.Context
-import ru.topbun.data.R
-import ru.topbun.domain.entity.privacy.PrivacyEntity
-import ru.topbun.domain.repository.privacy.PrivacyRepository
-import ru.topbun.ui.R.*
+import ru.topbun.domain.entity.terms.TermsEntity
+import ru.topbun.domain.repository.terms.TermsRepository
 
-class PrivacyRepositoryImpl(private val context: Context): PrivacyRepository {
+class TermsRepositoryImpl(private val context: Context): TermsRepository {
 
     private fun getArray(res: Int) = context.resources.getStringArray(res)
 
-    override suspend fun loadPrivacy(): List<PrivacyEntity> {
+    override suspend fun loadPrivacy(): List<TermsEntity> {
         val titles = getArray(ru.topbun.ui.R.array.policy_titles)
         val points = mutableListOf<List<String>>().apply {
             (1..titles.size).forEach {
@@ -23,7 +21,7 @@ class PrivacyRepositoryImpl(private val context: Context): PrivacyRepository {
             }
         }
         return titles.zip(points).map {
-            PrivacyEntity(it.first, it.second)
+            TermsEntity(it.first, it.second)
         }
     }
 

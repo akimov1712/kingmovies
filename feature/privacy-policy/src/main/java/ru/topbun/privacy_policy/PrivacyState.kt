@@ -1,7 +1,7 @@
 package ru.topbun.privacy_policy
 
-import ru.topbun.domain.entity.privacy.PrivacyEntity
+import ru.topbun.domain.entity.terms.TermsEntity
 
 data class PrivacyState(
-    val privacyList: List<PrivacyEntity> = emptyList()
+    val privacyList: List<TermsEntity> = emptyList()
 )

@@ -1,9 +1,9 @@
 package ru.topbun.data.di
 
 import org.koin.dsl.module
-import ru.topbun.data.repository.PrivacyRepositoryImpl
-import ru.topbun.domain.repository.privacy.PrivacyRepository
+import ru.topbun.data.repository.TermsRepositoryImpl
+import ru.topbun.domain.repository.terms.TermsRepository
 
 val repositoryModule = module {
-    single<PrivacyRepository> { PrivacyRepositoryImpl(get()) }
+    single<TermsRepository> { TermsRepositoryImpl(get()) }
 }
