@@ -50,6 +50,7 @@ dependencies {
     implementation(project(":core:android"))
     implementation(project(":feature:splash"))
     implementation(project(":feature:privacy-policy"))
+    implementation(project(":feature:agreement"))
     implementation(project(":domain"))
     implementation(project(":data"))
 

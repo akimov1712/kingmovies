@@ -1,5 +1,22 @@
 R_DEF: Internal format may change without notice
 local
+array agreement_point_1
+array agreement_point_10
+array agreement_point_11
+array agreement_point_12
+array agreement_point_13
+array agreement_point_14
+array agreement_point_15
+array agreement_point_16
+array agreement_point_2
+array agreement_point_3
+array agreement_point_4
+array agreement_point_5
+array agreement_point_6
+array agreement_point_7
+array agreement_point_8
+array agreement_point_9
+array agreement_titles
 array policy_point_1
 array policy_point_10
 array policy_point_11
