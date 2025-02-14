@@ -10,19 +10,33 @@ class TermsRepositoryImpl(private val context: Context): TermsRepository {
 
     override suspend fun loadPrivacy(): List<TermsEntity> {
         val titles = getArray(ru.topbun.ui.R.array.policy_titles)
+        val points = getPoints("policy_point_", titles.size)
+        return titles.zip(points).map {
+            TermsEntity(it.first, it.second)
+        }
+    }
+
+    override suspend fun loadAgreement(): List<TermsEntity> {
+        val titles = getArray(ru.topbun.ui.R.array.agreement_titles)
+        val points = getPoints("agreement_point_", titles.size)
+        return titles.zip(points).map {
+            TermsEntity(it.first, it.second)
+        }
+    }
+
+    private fun getPoints(part: String, size: Int): MutableList<List<String>> {
         val points = mutableListOf<List<String>>().apply {
-            (1..titles.size).forEach {
-                val resourceName = "policy_point_$it"
-                val resourceId = context.resources.getIdentifier(resourceName, "array", context.packageName)
+            (1..size).forEach {
+                val resourceName = "$part$it"
+                val resourceId =
+                    context.resources.getIdentifier(resourceName, "array", context.packageName)
                 val pointList = getArray(resourceId).toList().map {
                     it.replace("·", "\n\t·")
                 }
                 add(pointList)
             }
         }
-        return titles.zip(points).map {
-            TermsEntity(it.first, it.second)
-        }
+        return points
     }
 
 }
