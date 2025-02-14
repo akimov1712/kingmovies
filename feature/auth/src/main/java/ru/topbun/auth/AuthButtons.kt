@@ -3,7 +3,7 @@ package ru.topbun.auth
 import androidx.compose.ui.graphics.Color
 import ru.topbun.ui.R
 
-enum class AuthMethods(
+enum class AuthButtons(
     val title: String,
     val color: Color,
     val iconRes: Int
