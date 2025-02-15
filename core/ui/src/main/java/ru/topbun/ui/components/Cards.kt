@@ -93,7 +93,7 @@ sealed interface Cards {
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(0.7f)
-                    .clip(RoundedCornerShape(16.dp))
+                    .clip(RoundedCornerShape(12.dp))
                     .drawWithContent {
                         drawContent()
                         drawRect(
@@ -167,7 +167,7 @@ sealed interface Cards {
                 modifier = Modifier
                     .width(getScreenSize().width.times(0.4f))
                     .aspectRatio(0.7f)
-                    .clip(RoundedCornerShape(16.dp))
+                    .clip(RoundedCornerShape(12.dp))
                     .drawWithContent {
                         drawContent()
                         drawRect(
@@ -227,7 +227,7 @@ sealed interface Cards {
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(1.85f)
-                    .clip(RoundedCornerShape(16.dp))
+                    .clip(RoundedCornerShape(12.dp))
                     .drawWithContent {
                         drawContent()
                         drawRect(

@@ -29,6 +29,7 @@ int array policy_point_9 0x0
 int array policy_titles 0x0
 int drawable banner 0x0
 int drawable banner_logo 0x0
+int drawable horizontal_card 0x0
 int drawable ic_back 0x0
 int drawable ic_logo 0x0
 int drawable ic_telegram 0x0

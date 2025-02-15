@@ -30,6 +30,7 @@ array policy_point_9
 array policy_titles
 drawable banner
 drawable banner_logo
+drawable horizontal_card
 drawable ic_back
 drawable ic_logo
 drawable ic_telegram
