@@ -20,6 +20,7 @@ import cafe.adriel.voyager.navigator.currentOrThrow
 import org.koin.compose.getKoin
 import ru.topbun.agreement.AgreementScreen
 import ru.topbun.auth.AuthDialog
+import ru.topbun.main.MainScreen
 import ru.topbun.privacy_policy.PrivacyScreen
 import ru.topbun.splash.SplashScreen
 import ru.topbun.ui.components.BottomSheetDialog
@@ -37,7 +38,7 @@ class MainActivity : ComponentActivity() {
                 sheetShape = RoundedCornerShape(24.dp, 24.dp),
                 sheetBackgroundColor = Colors.BG_200
             ){
-                Navigator(SplashScreen)
+                Navigator(MainScreen)
             }
         }
     }

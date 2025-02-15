@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kapt)
 }
 
 android {
@@ -41,9 +40,6 @@ android {
     buildFeatures {
         compose = true
     }
-    kapt {
-        correctErrorTypes = true
-    }
 }
 
 dependencies {
@@ -55,6 +51,7 @@ dependencies {
     implementation(project(":feature:privacy-policy"))
     implementation(project(":feature:agreement"))
     implementation(project(":feature:auth"))
+    implementation(project(":feature:main"))
     implementation(project(":domain"))
     implementation(project(":data"))
 
