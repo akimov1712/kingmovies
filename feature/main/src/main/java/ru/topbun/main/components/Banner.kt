@@ -1,6 +1,8 @@
 package ru.topbun.main.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.gestures.snapping.SnapPosition
+import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,6 +18,7 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.runtime.Composable
@@ -44,8 +47,11 @@ fun Banner() {
 
 @Composable
 private fun BannerSlider() {
+    val state = rememberLazyListState()
     LazyRow(
         modifier = Modifier.fillMaxWidth(),
+        flingBehavior = rememberSnapFlingBehavior(lazyListState = state, SnapPosition.Start),
+        state = state,
         contentPadding = PaddingValues(horizontal = 16.dp),
         horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
@@ -59,7 +65,7 @@ private fun BannerSlider() {
 private fun BannerSliderItem() {
     Box(
         modifier = Modifier
-            .height(90.dp)
+            .height(100.dp)
             .aspectRatio(1.7f)
             .clip(RoundedCornerShape(8.dp)),
     ) {

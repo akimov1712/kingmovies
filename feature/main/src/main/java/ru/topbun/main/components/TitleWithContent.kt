@@ -15,26 +15,20 @@ import ru.topbun.ui.theme.Colors
 import ru.topbun.ui.theme.Typo
 
 @Composable
-fun FilmList() {
+fun TitleWithContent(
+    title: String = "",
+    content: @Composable () -> Unit
+) {
     Column(
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         AppText(
             modifier = Modifier.padding(start = 16.dp),
-            text = "Вы смотрели",
+            text = title,
             style = Typo.L,
             color = Colors.TEXT_100
         )
-        LazyRow(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
-            contentPadding = PaddingValues(horizontal = 16.dp)
-        ) {
-            repeat(10) {
-                item {
-                    Cards.HORIZONTAL.Card()
-                }
-            }
-        }
+        content()
+
     }
 }

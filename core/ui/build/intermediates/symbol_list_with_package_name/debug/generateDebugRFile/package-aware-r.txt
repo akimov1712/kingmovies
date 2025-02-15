@@ -28,6 +28,7 @@ array policy_point_7
 array policy_point_8
 array policy_point_9
 array policy_titles
+drawable actor
 drawable banner
 drawable banner_logo
 drawable horizontal_card
@@ -36,6 +37,7 @@ drawable ic_logo
 drawable ic_telegram
 drawable ic_vk
 drawable ic_yandex
+drawable random
 drawable vertical_card
 font golos_bold
 font golos_medium
