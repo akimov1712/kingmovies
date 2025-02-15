@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kapt)
 }
 
 android {
@@ -44,6 +43,7 @@ dependencies {
     implementation(project(":core:android"))
 
     implementation(project(":domain"))
+    implementation(project(":navigation"))
 
     implementation(libs.koin.android)
     implementation(libs.koin.compose)

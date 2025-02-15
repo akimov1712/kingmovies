@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kapt)
 }
 
 android {
@@ -43,6 +42,8 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:android"))
 
+    implementation(project(":navigation"))
+
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
     implementation(libs.koin.core)
@@ -50,6 +51,7 @@ dependencies {
 
     implementation(libs.voyager.navigator)
     implementation(libs.voyager.transitions)
+    implementation(libs.voyager.bottom.sheet.navigator)
 
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))

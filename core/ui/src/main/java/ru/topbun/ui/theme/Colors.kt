@@ -18,6 +18,7 @@ object Colors {
 
     val YELLOW_100 = Color(0xFFFFE34E)
     val YELLOW_200 = Color(0xFFE3C421)
+    val YELLOW_100_200 = Brush.horizontalGradient(listOf(YELLOW_100, YELLOW_200))
 
     val RED_100 = Color(0xFFFF6347)
     val RED_200 = Color(0xFFD7341D)
@@ -26,9 +27,11 @@ object Colors {
 
     val GREEN_100 = Color(0xFF22F577)
     val GREEN_200 = Color(0xFF31CE70)
+    val GREEN_100_200 = Brush.horizontalGradient(listOf(GREEN_100, GREEN_200))
 
     val BLUE_100 = Color(0xFF2C32E0)
     val BLUE_200 = Color(0xFF474EFF)
+    val BLUE_100_200 = Brush.horizontalGradient(listOf(BLUE_100, BLUE_200))
 
 
 }

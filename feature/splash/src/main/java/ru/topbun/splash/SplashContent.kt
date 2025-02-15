@@ -28,11 +28,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import cafe.adriel.voyager.core.registry.rememberScreen
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.bottomSheet.LocalBottomSheetNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import org.koin.compose.getKoin
 import org.koin.core.parameter.parametersOf
+import ru.topbun.navigation.SharedScreen
 import ru.topbun.ui.components.PulseLoading
 import ru.topbun.ui.theme.Colors
 import ru.topbun.ui.utills.koinInject
@@ -43,6 +46,9 @@ object SplashScreen : Screen {
     @Composable
     override fun Content() {
         ScreenContent()
+        val bottomSheetNavigator = LocalBottomSheetNavigator.current
+        val authScreen = rememberScreen(SharedScreen.AuthDialog)
+        bottomSheetNavigator.show(authScreen)
     }
 }
 
