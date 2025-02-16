@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import ru.topbun.main.components.Banner
 import ru.topbun.main.components.FilmActors
-import ru.topbun.main.components.TitleWithContent
+import ru.topbun.ui.components.TitleWithContent
 import ru.topbun.ui.theme.Colors
 
 object MainScreen: Screen {

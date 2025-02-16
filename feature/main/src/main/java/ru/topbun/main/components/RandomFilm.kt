@@ -28,7 +28,7 @@ import ru.topbun.ui.theme.Colors
 import ru.topbun.ui.theme.Typo
 
 @Composable
-fun RandomFilm() {
+internal fun RandomFilm() {
     Column(
         modifier = Modifier
             .fillMaxWidth()

@@ -38,7 +38,7 @@ import ru.topbun.ui.theme.Typo
 import ru.topbun.ui.utills.getScreenSize
 
 @Composable
-fun Banner() {
+internal fun Banner() {
     Column{
         BannerImage()
         BannerSlider()

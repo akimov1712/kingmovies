@@ -38,8 +38,10 @@ int drawable ic_logo 0x0
 int drawable ic_telegram 0x0
 int drawable ic_vk 0x0
 int drawable ic_yandex 0x0
+int drawable keanu 0x0
 int drawable random 0x0
 int drawable vertical_card 0x0
 int font golos_bold 0x0
 int font golos_medium 0x0
+int font golos_regular 0x0
 int font golos_semibold 0x0

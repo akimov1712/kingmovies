@@ -21,7 +21,7 @@ fun ColumnScope.TermsList(list: List<TermsEntity>) {
             .fillMaxWidth()
             .weight(1f),
         contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(10.dp)
+        verticalArrangement = Arrangement.spacedBy(20.dp)
     ) {
         items(items = list) {
             TermsItem(it)
@@ -33,7 +33,7 @@ fun ColumnScope.TermsList(list: List<TermsEntity>) {
 private fun TermsItem(privacy: TermsEntity) {
     Column(
         modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         AppText(privacy.title, style = Typo.M, color = Colors.TEXT_100)
         Column(

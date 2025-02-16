@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\User\AndroidStudioProjects\kingmovies\core\android\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest13680262757691163376.xml:2:13-83
-INJECTED from C:\Users\User\AndroidStudioProjects\kingmovies\core\android\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest13680262757691163376.xml:2:13-83
+ADDED from /Users/user/Projects/AndroidStudioProjects/kingmovies/core/android/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14500986277625521303.xml:2:13-83
+INJECTED from /Users/user/Projects/AndroidStudioProjects/kingmovies/core/android/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14500986277625521303.xml:2:13-83
 	package
-		INJECTED from C:\Users\User\AndroidStudioProjects\kingmovies\core\android\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest13680262757691163376.xml
+		INJECTED from /Users/user/Projects/AndroidStudioProjects/kingmovies/core/android/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14500986277625521303.xml
 	xmlns:android
-		ADDED from C:\Users\User\AndroidStudioProjects\kingmovies\core\android\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest13680262757691163376.xml:2:23-81
+		ADDED from /Users/user/Projects/AndroidStudioProjects/kingmovies/core/android/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14500986277625521303.xml:2:23-81
 uses-sdk
-INJECTED from C:\Users\User\AndroidStudioProjects\kingmovies\core\android\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest13680262757691163376.xml reason: use-sdk injection requested
-INJECTED from C:\Users\User\AndroidStudioProjects\kingmovies\core\android\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest13680262757691163376.xml
-INJECTED from C:\Users\User\AndroidStudioProjects\kingmovies\core\android\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest13680262757691163376.xml
+INJECTED from /Users/user/Projects/AndroidStudioProjects/kingmovies/core/android/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14500986277625521303.xml reason: use-sdk injection requested
+INJECTED from /Users/user/Projects/AndroidStudioProjects/kingmovies/core/android/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14500986277625521303.xml
+INJECTED from /Users/user/Projects/AndroidStudioProjects/kingmovies/core/android/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14500986277625521303.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\User\AndroidStudioProjects\kingmovies\core\android\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest13680262757691163376.xml
+		INJECTED from /Users/user/Projects/AndroidStudioProjects/kingmovies/core/android/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14500986277625521303.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\User\AndroidStudioProjects\kingmovies\core\android\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest13680262757691163376.xml
+		INJECTED from /Users/user/Projects/AndroidStudioProjects/kingmovies/core/android/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14500986277625521303.xml

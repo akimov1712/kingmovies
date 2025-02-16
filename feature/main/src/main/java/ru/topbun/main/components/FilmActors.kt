@@ -29,7 +29,7 @@ import ru.topbun.ui.theme.Colors
 import ru.topbun.ui.theme.Typo
 
 @Composable
-fun FilmActors() {
+internal fun FilmActors() {
     Column(
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {

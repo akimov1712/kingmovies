@@ -39,8 +39,10 @@ drawable ic_logo
 drawable ic_telegram
 drawable ic_vk
 drawable ic_yandex
+drawable keanu
 drawable random
 drawable vertical_card
 font golos_bold
 font golos_medium
+font golos_regular
 font golos_semibold
