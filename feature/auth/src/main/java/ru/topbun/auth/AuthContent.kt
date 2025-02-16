@@ -14,14 +14,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.text.LinkAnnotation
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.text.withLink
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.registry.rememberScreen
@@ -33,6 +27,7 @@ import ru.topbun.ui.components.AppText
 import ru.topbun.ui.components.BottomSheetDialog
 import ru.topbun.ui.theme.Colors
 import ru.topbun.ui.theme.Typo
+import ru.topbun.ui.utills.LinkText
 
 object AuthDialog: Screen {
 
@@ -65,24 +60,6 @@ fun ScreenContent() {
             style = Typo.XS,
             color = Colors.TEXT_200,
         )
-    }
-}
-
-@Composable
-fun AnnotatedString.Builder.LinkText(
-    text: String,
-    onClick: () -> Unit,
-) {
-    withLink(
-        LinkAnnotation.Clickable(
-            tag = text,
-            styles = TextLinkStyles(
-                SpanStyle(textDecoration = TextDecoration.Underline)
-            ),
-            linkInteractionListener = { onClick() }
-        )
-    ){
-        append(text)
     }
 }
 

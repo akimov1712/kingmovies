@@ -1,19 +1,11 @@
 package ru.topbun.ui.components
 
-import android.widget.Button
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonColors
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ButtonElevation
+import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -22,6 +14,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import ru.topbun.ui.theme.Colors
 import ru.topbun.ui.theme.Typo
@@ -54,6 +47,35 @@ object Buttons {
         }
     }
 
+    object OUTLINED{
+
+        @Composable
+        fun Button(
+            painterRes: Int,
+            borderColor: Color = Colors.TEXT_200,
+            shape: Shape = RoundedCornerShape(12.dp),
+            modifier: Modifier = Modifier,
+            onClick: () -> Unit
+        ) {
+            Box(
+                modifier = modifier
+                    .clip(shape)
+                    .background(Color.Transparent)
+                    .border(1.5.dp, borderColor, shape)
+                    .rippleClickable {
+                        onClick()
+                    }.padding(14.dp),
+                contentAlignment = Alignment.Center
+            ){
+                Icon(
+                    painter = painterResource(painterRes),
+                    contentDescription = null,
+                    tint = borderColor
+                )
+            }
+        }
+
+    }
 
     object RED{
 

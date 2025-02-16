@@ -52,6 +52,7 @@ dependencies {
     implementation(project(":feature:agreement"))
     implementation(project(":feature:auth"))
     implementation(project(":feature:main"))
+    implementation(project(":feature:film"))
     implementation(project(":domain"))
     implementation(project(":data"))
 
