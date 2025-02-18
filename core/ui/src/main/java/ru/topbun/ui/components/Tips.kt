@@ -6,8 +6,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.key.Key.Companion.G
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import ru.topbun.ui.theme.Colors
 import ru.topbun.ui.theme.Typo
@@ -36,6 +35,7 @@ sealed interface Tips {
                     .padding(6.dp, 3.5.dp),
                 text = type,
                 style = Typo.S,
+                fontWeight = FontWeight.SemiBold,
                 color = Colors.TEXT_300
             )
         }
