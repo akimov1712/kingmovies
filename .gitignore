@@ -8,7 +8,8 @@
 .externalNativeBuild
 .cxx
 local.properties
-/core/ui/build/
-/core/common/build/
-/core/android/build/
+core/ui/build/
+core/common/build/
+core/android/build/
+
 

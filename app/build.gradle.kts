@@ -53,6 +53,7 @@ dependencies {
     implementation(project(":feature:auth"))
     implementation(project(":feature:main"))
     implementation(project(":feature:film"))
+    implementation(project(":feature:search"))
     implementation(project(":domain"))
     implementation(project(":data"))
 
