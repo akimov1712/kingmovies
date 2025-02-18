@@ -48,7 +48,7 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:android"))
     implementation(project(":feature:splash"))
-    implementation(project(":feature:privacy-policy"))
+    implementation(project(":feature:privacy"))
     implementation(project(":feature:agreement"))
     implementation(project(":feature:auth"))
     implementation(project(":feature:main"))
