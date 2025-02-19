@@ -3,6 +3,7 @@ package ru.topbun.ui.components
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -73,22 +74,20 @@ fun AppTextField(
                 tint = Colors.TEXT_200
             )
         }
-        if (text.isBlank()){
-            AppText(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1f)
-                    .align(Alignment.CenterVertically),
-                text = placeholder,
-                style = Typo.S.copy(fontWeight = FontWeight.Medium),
-                color = Colors.TEXT_200
-            )
-        } else {
+        Box(
+            modifier = Modifier
+            .fillMaxWidth()
+            .weight(1f)
+            .align(Alignment.CenterVertically)
+        ){
+            if (text.isBlank()){
+                AppText(
+                    text = placeholder,
+                    style = Typo.S.copy(fontWeight = FontWeight.Medium),
+                    color = Colors.TEXT_200
+                )
+            }
             BasicTextField(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1f)
-                    .align(Alignment.CenterVertically),
                 value = text,
                 onValueChange = onTextChange,
                 textStyle = textStyle,
@@ -105,6 +104,7 @@ fun AppTextField(
                 interactionSource = interactionSource,
                 decorationBox = decorationBox,
             )
+
         }
         if (onClickClear != null && text.isNotBlank()){
             Icon(
