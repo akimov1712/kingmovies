@@ -47,23 +47,16 @@ private fun ScreenContent() {
             .systemBarsPadding(),
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
-        val state = rememberLazyGridState()
+        val gridState = rememberLazyGridState()
         var search by remember { mutableStateOf("") }
 
         val columns = 170.dp
-        val isShowTitle by state.isRowVisible(columns, 3)
-        Column{
-            val sizeSpacer = if(isShowTitle) 20.dp else 0.dp
-            Title(isShowTitle)
-            Spacer(Modifier.animateContentSize().height(sizeSpacer))
-            TextField(search){ search = it }
-            Spacer(Modifier.animateContentSize().height(sizeSpacer))
-            Subtitle(search, isShowTitle)
-        }
+        val isShowTitle by gridState.isRowVisible(columns, 3)
+        Header(isShowTitle, search){ search = it }
         LazyVerticalGrid(
-            state = state,
+            state = gridState,
             columns = GridCells.Adaptive(170.dp),
-            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 10.dp),
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
             horizontalArrangement = Arrangement.spacedBy(10.dp)
         ) {
@@ -73,6 +66,22 @@ private fun ScreenContent() {
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun Header(isShowTitle: Boolean, search: String, onChangeSearch: (String) -> Unit) {
+    Column {
+        val sizeSpacer = if (isShowTitle) 20.dp else 0.dp
+        Title(isShowTitle)
+        Spacer(Modifier
+            .animateContentSize()
+            .height(sizeSpacer))
+        TextField(search) { onChangeSearch(it)}
+        Spacer(Modifier
+            .animateContentSize()
+            .height(sizeSpacer))
+        Subtitle(search, isShowTitle)
     }
 }
 

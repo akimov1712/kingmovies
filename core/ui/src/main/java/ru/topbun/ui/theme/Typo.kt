@@ -18,7 +18,7 @@ object Typo {
     )
 
     val L @Composable get() = APP_STYLE.copy(
-        fontSize = 20.sp,
+        fontSize = 22.sp,
         fontWeight = FontWeight.SemiBold,
     )
 
