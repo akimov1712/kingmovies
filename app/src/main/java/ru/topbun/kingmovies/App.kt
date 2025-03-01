@@ -7,6 +7,7 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
 import ru.topbun.agreement.di.agreementScreenModule
 import ru.topbun.auth.di.authScreenModule
+import ru.topbun.filter.di.filterScreenModule
 import ru.topbun.kingmovies.di.appModule
 import ru.topbun.privacy_policy.di.privacyScreenModule
 
@@ -31,6 +32,7 @@ class App: Application() {
             privacyScreenModule()
             agreementScreenModule()
             authScreenModule()
+            filterScreenModule()
         }
     }
 

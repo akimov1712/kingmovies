@@ -29,7 +29,7 @@ object Typo {
 
     val S @Composable get() = APP_STYLE.copy(
         fontSize = 14.sp,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.Medium,
     )
 
     val XS @Composable get() = APP_STYLE.copy(

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.topbun.catalog"
+    namespace = "ru.topbun.filter"
     compileSdk = 35
 
     defaultConfig {
@@ -45,7 +45,6 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":navigation"))
 
-
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
     implementation(libs.koin.core)
@@ -69,4 +68,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }

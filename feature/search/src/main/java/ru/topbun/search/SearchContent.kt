@@ -2,15 +2,11 @@ package ru.topbun.search
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.systemBarsPadding
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -24,7 +20,7 @@ import cafe.adriel.voyager.core.screen.Screen
 import ru.topbun.search.components.Subtitle
 import ru.topbun.search.components.TextField
 import ru.topbun.search.components.Title
-import ru.topbun.ui.components.Cards
+import ru.topbun.ui.components.FilmList
 import ru.topbun.ui.theme.Colors
 import ru.topbun.ui.utills.isRowVisible
 
@@ -45,7 +41,6 @@ private fun ScreenContent() {
             .fillMaxSize()
             .background(Colors.BG_100)
             .systemBarsPadding(),
-        verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         val gridState = rememberLazyGridState()
         var search by remember { mutableStateOf("") }
@@ -53,19 +48,8 @@ private fun ScreenContent() {
         val columns = 170.dp
         val isShowTitle by gridState.isRowVisible(columns, 3)
         Header(isShowTitle, search){ search = it }
-        LazyVerticalGrid(
-            state = gridState,
-            columns = GridCells.Adaptive(170.dp),
-            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            repeat(100){
-                item {
-                    Cards.VERTICAL.Card()
-                }
-            }
-        }
+        Spacer(Modifier.height(10.dp))
+        FilmList(gridState)
     }
 }
 

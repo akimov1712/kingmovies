@@ -24,7 +24,7 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import ru.topbun.navigation.SharedScreen
 import ru.topbun.ui.components.AppText
-import ru.topbun.ui.components.BottomSheetDialog
+import ru.topbun.ui.components.BottomSheetWrapper
 import ru.topbun.ui.theme.Colors
 import ru.topbun.ui.theme.Typo
 import ru.topbun.ui.utills.LinkText
@@ -43,7 +43,7 @@ fun ScreenContent() {
     val navigator = LocalNavigator.currentOrThrow
     val agreementScreen = rememberScreen(SharedScreen.AgreementScreen)
     val privacyScreen = rememberScreen(SharedScreen.PrivacyScreen)
-    BottomSheetDialog{
+    BottomSheetWrapper{
         TextDialog()
         Spacer(Modifier.height(20.dp))
         ButtonsDialog()
