@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             changeStatusBar(Color.Transparent)
             BottomSheetNavigator(
-                sheetShape = RoundedCornerShape(24.dp, 24.dp),
+                sheetShape = RoundedCornerShape(16.dp, 16.dp),
                 sheetBackgroundColor = Colors.BG_200
             ){
                 Navigator(CatalogScreen)
