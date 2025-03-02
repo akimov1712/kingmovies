@@ -20,6 +20,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import ru.topbun.common.getYearsList
+import ru.topbun.domain.entity.filter.RatingType
 import ru.topbun.domain.entity.filter.SortType
 import ru.topbun.filter.FilterItems
 import ru.topbun.ui.theme.Colors
@@ -27,11 +29,15 @@ import ru.topbun.ui.utills.rippleClickable
 
 
 @Composable
-internal fun ColumnScope.SortedList(
+internal fun ColumnScope.FilterList(
     filterItem: FilterItems,
 ) {
-    val sortTypes = SortType.entries
-    var selectedItem by remember { mutableStateOf<SortType?>(sortTypes.first()) }
+    val types = when(filterItem){
+        FilterItems.SORTED -> SortType.entries.toList()
+        FilterItems.YEAR -> getYearsList()
+        FilterItems.RATING -> RatingType.entries.toList()
+    }.map { it.toString() }
+    var selectedItem by remember { mutableStateOf(if (filterItem.requestParam) types.first() else null) }
     var isExpanded by remember { mutableStateOf(false) }
     val height = if (isExpanded) Modifier.weight(1f, false) else Modifier.wrapContentHeight()
 
@@ -43,7 +49,7 @@ internal fun ColumnScope.SortedList(
             .clip(RoundedCornerShape(12.dp))
     ) {
         FilterItem(
-            text = selectedItem.toString(),
+            text = selectedItem ?: filterItem.title,
             painter = filterItem.iconRes,
             modifier = Modifier
                 .fillMaxWidth()
@@ -58,8 +64,9 @@ internal fun ColumnScope.SortedList(
             LazyColumn(
                 modifier = Modifier.fillMaxWidth()
             ) {
-                val displayTypes = buildList<SortType?>{
-                    sortTypes.filter { it != selectedItem }
+                val displayTypes = buildList{
+                    if (!filterItem.requestParam && selectedItem != null) add(null)
+                    addAll(types.filter { it != selectedItem })
                 }
                 itemsIndexed(displayTypes) { index, sortType ->
                     Box(
@@ -69,7 +76,7 @@ internal fun ColumnScope.SortedList(
                             .background(Colors.BG_200)
                     )
                     FilterItem(
-                        text = sortType.toString(),
+                        text = sortType,
                         painter = filterItem.iconRes,
                         modifier = Modifier
                             .fillMaxWidth()

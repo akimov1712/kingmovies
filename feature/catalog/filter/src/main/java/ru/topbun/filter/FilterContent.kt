@@ -14,7 +14,7 @@ import cafe.adriel.voyager.core.screen.Screen
 import ru.topbun.filter.FilterItems.RATING
 import ru.topbun.filter.FilterItems.SORTED
 import ru.topbun.filter.FilterItems.YEAR
-import ru.topbun.filter.components.SortedList
+import ru.topbun.filter.components.FilterList
 import ru.topbun.ui.components.BottomSheetWrapper
 import ru.topbun.ui.components.Buttons
 import ru.topbun.ui.utills.getScreenSize
@@ -37,9 +37,9 @@ object FilterDialog : Screen {
                 ){
                     filterItems.forEach { filterItem ->
                         when (filterItem) {
-                            SORTED -> { SortedList(filterItem) }
-                            YEAR -> { SortedList(filterItem) }
-                            RATING -> { SortedList(filterItem) }
+                            SORTED -> { FilterList(filterItem) }
+                            YEAR -> { FilterList(filterItem) }
+                            RATING -> { FilterList(filterItem) }
                         }
                     }
                 }

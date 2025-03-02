@@ -21,7 +21,7 @@ import ru.topbun.ui.theme.Typo
 
 @Composable
 internal fun FilterItem(
-    text: String,
+    text: String?,
     painter: Int,
     isSelectedItem: Boolean,
     isOpenList: Boolean,
@@ -47,8 +47,8 @@ internal fun FilterItem(
             contentAlignment = Alignment.CenterStart
         ) {
             AppText(
-                text = text,
-                color = Colors.TEXT_100,
+                text = text ?: "Не выбрано",
+                color = if (text.isNullOrBlank()) Colors.RED_100 else Colors.TEXT_100,
                 style = Typo.S,
             )
         }
